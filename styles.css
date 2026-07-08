@@ -574,3 +574,105 @@ footer strong { color: white; }
   .edge-step-head span { display: block; margin-top: 4px; }
   .btn { width: 100%; }
 }
+
+/* ============================================================
+   GOAL page — teaching layout
+   ============================================================ */
+.page-hero {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(42,123,212,0.22), transparent 26rem),
+    linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-soft) 100%);
+  color: white;
+  padding: 62px 20px 54px;
+}
+.page-hero .wrap { max-width: 820px; }
+.page-hero h1 {
+  font-size: clamp(38px, 6vw, 60px);
+  margin-bottom: 14px;
+}
+.page-hero .hero-lead {
+  font-size: clamp(17px, 2.2vw, 21px);
+  color: rgba(255,255,255,0.86);
+  margin-bottom: 0;
+}
+.prose-wrap { max-width: 820px; }
+.step-block {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 26px 0;
+  border-top: 1px solid var(--rule);
+}
+.step-block:first-of-type { border-top: none; }
+.step-letter {
+  width: 68px; height: 68px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: var(--serif);
+  font-size: 38px; font-weight: 700;
+  color: white;
+  box-shadow: 0 8px 24px rgba(42,123,212,0.18);
+}
+.step-letter.g { background: var(--gather); }
+.step-letter.o { background: var(--explore); }
+.step-letter.a { background: var(--dig); }
+.step-letter.l { background: var(--embrace); }
+.step-block h3 {
+  font-family: var(--serif);
+  color: var(--navy);
+  font-size: 26px;
+  font-weight: 600;
+  margin: 4px 0 2px;
+}
+.step-block .ask {
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.step-block p { color: var(--ink-soft); margin-bottom: 10px; }
+.step-block p:last-child { margin-bottom: 0; }
+.example-card {
+  background: var(--accent-pale);
+  border: 1px solid var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-top: 10px;
+}
+.example-card .ex-label {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.6px;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 2px;
+}
+.example-card p { color: var(--ink); margin: 0; }
+.verse-callout {
+  background: var(--navy);
+  color: white;
+  border-radius: 16px;
+  padding: 26px 28px;
+  margin: 8px 0 4px;
+  box-shadow: var(--shadow-elev);
+}
+.verse-callout .ref {
+  font-size: 13px; letter-spacing: 1px; text-transform: uppercase;
+  color: rgba(255,255,255,0.7); font-weight: 700; margin-bottom: 8px;
+}
+.verse-callout p {
+  font-family: var(--serif);
+  font-size: 21px; line-height: 1.5;
+  color: white; margin: 0;
+}
+.try-cta {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(74,157,74,0.18), transparent 20rem),
+    radial-gradient(circle at 88% 40%, rgba(142,84,181,0.18), transparent 22rem),
+    var(--navy);
+  color: white;
+  border-radius: 22px;
+  padding: 34px;
+  text-align: center;
+  box-shadow: var(--shadow-elev);
+}
+.try-cta h2 { color: white; margin-bottom: 8px; }
+.try-cta p { color: rgba(255,255,255,0.84); font-size: 18px; margin: 0 auto 20px; max-width: 520px; }
