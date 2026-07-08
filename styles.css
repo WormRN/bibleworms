@@ -601,10 +601,25 @@ footer strong { color: white; }
   grid-template-columns: 68px 1fr;
   gap: 18px;
   align-items: start;
-  padding: 26px 0;
-  border-top: 1px solid var(--rule);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
 }
-.step-block:first-of-type { border-top: none; }
+.step-block::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+}
+.step-block.tint-g::before { background: var(--gather); }
+.step-block.tint-o::before { background: var(--explore); }
+.step-block.tint-a::before { background: var(--dig); }
+.step-block.tint-l::before { background: var(--embrace); }
 .step-letter {
   width: 68px; height: 68px;
   border-radius: 50%;
