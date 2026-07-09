@@ -691,3 +691,95 @@ footer strong { color: white; }
 }
 .try-cta h2 { color: white; margin-bottom: 8px; }
 .try-cta p { color: rgba(255,255,255,0.84); font-size: 18px; margin: 0 auto 20px; max-width: 520px; }
+
+/* ============================================================
+   EDGE page — map cards, practice sections, back-to-top
+   ============================================================ */
+[id] { scroll-margin-top: 84px; } /* anchor jumps land below sticky header */
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+.map-card {
+  display: block;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.map-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-elev); }
+.map-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+}
+.map-card.t-explore::before { background: var(--explore); }
+.map-card.t-dig::before     { background: var(--dig); }
+.map-card.t-gather::before  { background: var(--gather); }
+.map-card.t-embrace::before { background: var(--embrace); }
+.map-card .mc-letter {
+  font-family: var(--serif);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.map-card.t-explore .mc-letter { color: var(--explore); }
+.map-card.t-dig .mc-letter     { color: var(--dig); }
+.map-card.t-gather .mc-letter  { color: var(--gather); }
+.map-card.t-embrace .mc-letter { color: var(--embrace); }
+.map-card h3 { font-family: var(--serif); color: var(--navy); font-size: 21px; margin-bottom: 4px; }
+.map-card .mc-acrostic {
+  font-size: 12px; font-weight: 700; letter-spacing: 1.2px;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
+}
+.map-card p { color: var(--ink-soft); font-size: 15px; margin: 0; }
+
+/* EDGE section letter + tint reuse */
+.step-letter.c-explore { background: var(--explore); }
+.step-letter.c-dig     { background: var(--dig); }
+.step-letter.c-gather  { background: var(--gather); }
+.step-letter.c-embrace { background: var(--embrace); }
+.step-block.t-explore::before { background: var(--explore); }
+.step-block.t-dig::before     { background: var(--dig); }
+.step-block.t-gather::before  { background: var(--gather); }
+.step-block.t-embrace::before { background: var(--embrace); }
+
+.edge-sec-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+.edge-sec-head .step-letter { flex-shrink: 0; }
+.edge-sec-head h2 { margin: 0; }
+.edge-sec-head .sec-q {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--muted);
+  font-size: 17px;
+  margin-top: 2px;
+}
+.practice-tip {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.practice-tip strong { color: var(--accent); font-weight: 700; }
+.back-top {
+  display: inline-block;
+  margin: 6px 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+.back-top:hover { text-decoration: underline; }
