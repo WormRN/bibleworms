@@ -783,3 +783,105 @@ footer strong { color: white; }
   text-decoration: none;
 }
 .back-top:hover { text-decoration: underline; }
+
+/* ============================================================
+   Bible Basics — homepage card, hub grid, article pages
+   ============================================================ */
+.basics-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 18px;
+  padding: 26px 28px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.basics-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-elev); }
+.basics-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg,
+    var(--explore) 0%, var(--explore) 25%,
+    var(--dig)     25%, var(--dig)     50%,
+    var(--gather)  50%, var(--gather)  75%,
+    var(--embrace) 75%, var(--embrace) 100%);
+}
+.basics-card .bc-body { flex: 1; }
+.basics-card h3 { font-family: var(--serif); color: var(--navy); font-size: 26px; margin-bottom: 6px; }
+.basics-card p { color: var(--ink-soft); margin: 0; }
+.basics-card .bc-arrow { color: var(--accent); font-size: 26px; font-weight: 700; flex-shrink: 0; }
+
+/* Hub grid of article cards */
+.basics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+a.article-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+a.article-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-elev); }
+.article-card .read-on {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Article body */
+.article-body { max-width: 760px; }
+.article-body h2 {
+  font-family: var(--serif);
+  color: var(--navy);
+  font-size: 30px;
+  margin: 38px 0 12px;
+}
+.article-body h2:first-child { margin-top: 0; }
+.article-body p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+.article-body p.emph { color: var(--ink); font-weight: 700; }
+.scripture {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-pale);
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+}
+.scripture p {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--navy);
+  margin: 0 0 6px;
+  line-height: 1.5;
+}
+.scripture .ref {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.article-note {
+  margin-top: 34px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+  color: var(--muted);
+}
