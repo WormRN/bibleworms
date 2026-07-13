@@ -1084,3 +1084,43 @@ a.article-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-ele
   padding-left: 14px;
   margin: 12px 0;
 }
+
+/* WORD section on EDGE page */
+.word-section {
+  background: var(--canvas);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 26px;
+  margin: 26px 0;
+}
+
+/* Rules page jump map */
+.rules-map {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.rules-map a {
+  display: block;
+  padding: 10px 14px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 15px;
+  font-weight: 700;
+  transition: border-color 0.15s, color 0.15s, transform 0.15s;
+}
+.rules-map a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+.rules-map a .n {
+  color: var(--gather);
+  font-family: var(--serif);
+  margin-right: 6px;
+}
+.rules-map.genres a .n { color: var(--embrace); }
