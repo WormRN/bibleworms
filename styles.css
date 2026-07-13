@@ -965,3 +965,74 @@ a.article-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-ele
 }
 .caution h3 { margin-top: 0; color: var(--navy); }
 .caution p:last-child { margin-bottom: 0; }
+
+/* Vertical spectrum layout */
+.spectrum-v {
+  display: flex;
+  gap: 18px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+  margin: 24px 0;
+}
+.spectrum-axis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.spectrum-axis .axis-bar {
+  flex: 1;
+  width: 10px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--gather) 0%, var(--explore) 50%, var(--dig) 100%);
+}
+.spectrum-axis .axis-end {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  white-space: nowrap;
+}
+.spectrum-axis .axis-end.top { transform: rotate(180deg); }
+.spectrum-v .spectrum-rows { flex: 1; }
+
+/* Translation acronym glossary */
+.glossary {
+  background: var(--canvas);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin: 28px 0 8px;
+}
+.glossary h3 {
+  margin-top: 0;
+  font-family: var(--serif);
+  color: var(--navy);
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+.glossary dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+  align-items: baseline;
+}
+.glossary dt {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 15px;
+  letter-spacing: 0.4px;
+}
+.glossary dd {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 16px;
+}
