@@ -1036,3 +1036,51 @@ a.article-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-ele
   color: var(--ink-soft);
   font-size: 16px;
 }
+
+/* Numbered rule cards */
+.rule-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  padding: 20px 22px;
+  box-shadow: var(--shadow);
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.rule-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: var(--gather);
+}
+.rule-card .rule-num {
+  display: inline-block;
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--gather);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.rule-card h3 {
+  font-family: var(--serif);
+  color: var(--navy);
+  font-size: 23px;
+  margin: 0 0 8px;
+}
+.rule-card p { margin-bottom: 10px; }
+.rule-card p:last-child { margin-bottom: 0; }
+.genre-card::before { background: var(--embrace); }
+.genre-card .rule-num { color: var(--embrace); }
+.key-line {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-style: italic;
+  color: var(--navy);
+  border-left: 3px solid var(--accent);
+  padding-left: 14px;
+  margin: 12px 0;
+}
